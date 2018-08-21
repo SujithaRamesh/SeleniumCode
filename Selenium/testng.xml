@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5" parallel="classes" thread-count='2'>
+<groups>
+<run>
+<include name="smoke"></include>
+<include name="regression"></include>
+</run>
+</groups>
+	<parameter name="url" value="http://www.leaftaps.com/opentaps" />
+	<parameter name="username" value="DemoSalesManager" />
+	<parameter name="password" value="crmsfa" />
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="week3.day1.CreateLead" />
+			<class name="week3.day1.EditLeadUsingSeMethods" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
